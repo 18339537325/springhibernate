@@ -14,6 +14,7 @@ public class StudentController {
     StudentService studentService;
     @RequestMapping("/get.do")
     public String getStudent(int id){
+
         StudentEntity entity = studentService.findById(1);
         Gson gson = new Gson();
         String json = gson.toJson(entity);
